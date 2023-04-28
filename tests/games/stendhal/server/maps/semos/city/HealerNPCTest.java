@@ -114,7 +114,7 @@ public class HealerNPCTest {
 
 		assertTrue(en.step(player, "!me hugs Carmen"));
 		assertEquals("!me hugs bob", getReply(npc));
-		assertTrue(en.step(player, "bye"));
+		assertFalse(en.step(player, "bye"));
 		assertEquals("Bye.", getReply(npc));
 	}
 }
